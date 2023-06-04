@@ -1,0 +1,22 @@
+<html>
+{% load static %}
+    <head>
+        <link rel="stylesheet" href="{% static 'css/hello.css' %}">
+        <title>login</title>
+    </head>
+    <body >
+        <img id="iim"  src="{% static 'img/index.png' %}"> </img>
+
+        <div>
+            <form method="POST">
+                {% csrf_token %}
+            <input id="ff" type="text" placeholder="Username" name="username" required><br>           
+            <input id="ff" type="password" placeholder="password" name="password" required><br><br>            
+            <a href="/signup"><input id="ff13" type="button" value="Signup"></input></a>
+            <input id="ff12" type="submit" value="Login"></input><br>
+            <h1>{{col}}</h1>
+            <br>
+            </form>
+        </div>
+    </body>
+</html>

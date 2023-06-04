@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/hi.css' %}">
+  </head>
+  <body>
+    <img id="iim"  src="{% static 'img/index.png' %}"> </img>
+	<div>
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" input id="ff" id="username" placeholder="Username" name="username" required><br>
+      
+      <input type="email" input id="ff" id="email" placeholder="email" name="email" required><br>
+      
+      <input type="tel" input id="ff" id="phone_number" placeholder="phone_number" name="phoneno" required><br><br>
+      
+      <center><select name="gender" input id="seclin" id="gender">
+		<option value="">-Select Gender-</option>
+		<option value="Male">Male</option>
+		<option value="Female">Female</option>
+		<option value="Other">Other</option>
+	  </select></center>
+      
+      <input type="password" input id="ff" id="password" placeholder="password" name="password" required><br>
+      
+      <input type="submit" input id="ff13" value="Sign Up">    
+      <a href="/login"><input id="ff12" type="button" value="Login"></a></input><br>
+	  </form>
+	</div>
+  </body>
+</html>
